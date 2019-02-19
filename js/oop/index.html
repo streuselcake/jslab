@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Heads I win tails you lose!</title>
+</head>
+<body>
+  <h1>Heads I win tails you lose, many coins!</h1>
+  <div id="content"></div>
+  <br /><br /><br />
+  References:
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/class" target="blank">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/class</a></li>
+    <!-- <li><a href="" target="blank"></a></li> -->
+  </ul>
+</body>
+</html>
+
+<script src="Coin.js"></script>
+
+<script>
+
+
+// using coin-objects...
+
+var c2 = new LongFlyingCoin(2);
+c2.isHeadsThrowHigh(1, (id,v) => document.getElementById("content").innerHTML += id + ". long flying coin is heads: " + v + "<br />");
+
+
+var c1 = new Coin(1);
+c1.observe = true;
+
+document.getElementById("content").innerHTML += "Heads: " + c1.isHeads()+ "<br />";
+document.getElementById("content").innerHTML += "Heads: " + c1.isHeads()+ "<br />";
+document.getElementById("content").innerHTML += "Heads: " + c1.isHeads()+ "<br />";
+document.getElementById("content").innerHTML += "Heads: " + c1.isHeads()+ "<br />";
+document.getElementById("content").innerHTML += "Heads: " + c1.isHeads()+ "<br />";
+document.getElementById("content").innerHTML += "Heads: " + c1.isHeads()+ "<br />";
+document.getElementById("content").innerHTML += "Heads: " + c1.isHeads()+ "<br />";
+
+c1.tailsCount = 0;
+c1.headsCount = 1;
+
+document.getElementById("content").innerHTML += "Heads: " + c1.isHeads()+ "<br />";
+
+</script>

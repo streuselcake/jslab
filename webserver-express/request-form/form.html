@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTTP Requests</title>
+</head>
+<body>
+
+  <h1>Retrieve Item (GET Request)</h1>
+
+  <form action="item/" method="GET" >
+    Name:<br />
+    <input type="text" name="name" /><br
+    <br />
+    <input type="submit" value="Send" />
+  </form>
+
+  <br />
+
+  <h1>Add Item (POST Request)</h1>
+
+  <form action="item/create" method="POST" >
+    Name:<br />
+    <input type="text" name="name" /><br>
+    Description:<br />
+    <input type="text" name="description" /><br>
+    <br />
+    <input type="submit" value="Send" />
+  </form>
+
+  <br />
+
+  <h1>Update Item (PUT via POST Request)</h1>
+
+  <form action="item/update" method="POST" >
+    Name:<br />
+    <input type="text" name="name" /><br>
+    Description:<br />
+    <input type="text" name="description" /><br>
+    <br />
+    <input type="submit" value="Send" />
+  </form>
+
+  <br />
+
+  <h1>Delete Item (DELETE via GET Request)</h1>
+
+  <form action="item/delete" method="GET" >
+    Name:<br />
+    <input type="text" name="name" /><br
+    <br />
+    <input type="submit" value="Send" />
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Form and JS</title>
+</head>
+<body>
+  <h1>HTML Form and JS</h1>
+
+  <!--The empty javascript overwrites the action attribute and
+  prevents the browser from sending the form data to a server.
+  Now the script is in charge of processing and/or passing data to the server.-->
+  
+  <form action="javascript:void(0);">
+    Firstname:<br>
+    <input id="fninput" type="text" name="firstname" required><br>
+    Name:<br>
+    <input id="lninput" type="text" name="lastname"><br>
+    <input type="submit" value="Send" onclick="donotsubmit()" >
+  </form>
+  <br />
+  <br />
+  <form action="javascript:void(0);" method="post" onsubmit="return isok()">
+    <input id="testvalue" type="text" name="testinput" value="accept only this text" required>
+    <input type="submit" value="Send" onclick="donotsubmit2()">
+  </form>
+
+  <div id="result"></div>
+
+  <ul>
+    <li><a target="blank" href="https://www.w3schools.com/html/html_forms.asp">https://www.w3schools.com/html/html_forms.asp</a></li>
+    <li><a target="blank" href="https://www.w3schools.com/js/js_validation.asp">https://www.w3schools.com/js/js_validation.asp</a></li>
+  </ul>
+
+</body>
+</html>
+
+<script>
+
+function donotsubmit(){
+  "use strict";
+  document.getElementById("result").innerHTML = "Firstname: " + document.getElementById("fninput").value + "<br />" +
+  "Name: " + document.getElementById("lninput").value;
+}
+
+function donotsubmit2(){
+  "use strict";
+  document.getElementById("result").innerHTML = "accept only this text";
+}
+
+function isok(){
+  if(document.getElementById("testvalue").value==="accept only this text"){
+    window.alert("sending form (accepted value)");
+  } else {
+    window.alert("we accept only: \"accept only this text\"");
+  }
+}
+
+</script>

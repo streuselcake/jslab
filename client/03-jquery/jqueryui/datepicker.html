@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- cdn loading css -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <title>jQuery UI Datepicker</title>
+
+</head>
+<body>
+<p>Date: <input type="text" id="datepicker"></p>
+
+References:
+<ul>
+  <li><a href="http://learn.jquery.com/jquery-ui/getting-started/" target="blank">http://learn.jquery.com/jquery-ui/getting-started/</a></li>
+  <li><a href="https://code.jquery.com/jquery/" target="blank">https://code.jquery.com/jquery/</a></li>
+  <li><a href="https://code.jquery.com/ui/" target="blank">https://code.jquery.com/ui/</a></li>
+  <li><a href="https://jqueryui.com/" target="blank"></a>https://jqueryui.com/</li>
+  <li><a href="http://jqueryui.com/demos/" target="blank">http://jqueryui.com/demos/</a></li>
+</ul>
+
+
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+
+$( "#datepicker" ).datepicker({
+  showOtherMonths: true,
+  selectOtherMonths: true,
+  showWeek: true,
+  firstDay: 1,
+  dateFormat: "yy-mm-dd",
+  showAnim: "fadeIn"
+});
+
+</script>

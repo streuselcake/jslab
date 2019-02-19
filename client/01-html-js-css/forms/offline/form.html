@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Form</title>
+</head>
+<body>
+  <h1>HTML Form</h1>
+
+  <!--The browser will send the data to the path specified in the action="..." attribute.
+  Try method="post" vs. method="get" and/or other paths. The difference is that the get method
+  includes the data in the querystring whereas the post method includes the data in the body.
+  Post parameters are encrypted in https (get parameters are not!). This normally results in
+  the server responding with the site/path associated (and/or redirect).-->
+
+  <form action="./form.html" method="post" >
+    Firstname:<br />
+    <input type="text" name="firstname" /><br>
+    Name:<br />
+    <input type="text" name="lastname" /><br>
+    <br />
+    <input type="submit" value="Send" />
+  </form>
+
+  <ul>
+    <li><a target="blank" href="https://www.w3schools.com/html/html_forms.asp">https://www.w3schools.com/html/html_forms.asp</a></li>
+    <li><a target="blank" href="https://www.w3schools.com/js/js_validation.asp">https://www.w3schools.com/js/js_validation.asp</a></li>
+  </ul>
+
+</body>
+</html>

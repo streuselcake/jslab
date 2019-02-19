@@ -1,0 +1,10 @@
+{
+  "color": "blue",
+  "size": 3,
+  "type": "A",
+  "nested_object": {
+    "nested" : "yes",
+    "level" : 2,
+    "things" : ["car", "bike", "house", "food"]
+  }
+}

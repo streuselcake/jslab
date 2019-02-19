@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Functions: Heads I win tails you lose!</title>
+
+</head>
+<body>
+
+  <h1>Functions: Heads I win tails you lose!</h1>
+  <div id="content"></div>
+
+  <br /><br /><br />
+  References:
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" target="blank">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="blank">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions</a></li>
+    <!-- <li><a href="" target="blank"></a></li> -->
+  </ul>
+</body>
+</html>
+
+<script src="func.js"></script>
+
+<script>
+
+
+// now we do something with the coin functions
+
+var countHeads = 0;
+var countTails = 0;
+
+var c1 = isHeads();
+if(c1){
+  ++countHeads;
+} else {
+  ++countTails;
+}
+
+var c2 = flipCoin();
+if(c2[0]){
+  ++countHeads;
+} else {
+  ++countTails;
+}
+
+var c3 = flipObservedCoin(countHeads, countTails);
+
+
+var content = document.getElementById("content");
+content.innerHTML += "Heads: " + c1 + "<br />";
+content.innerHTML += "Coin [Heads, Tails]: " + JSON.stringify(c2) + "<br />";
+content.innerHTML += "Fake Coin ("+ countHeads +", "+ countTails +"): " + JSON.stringify(c3);
+</script>

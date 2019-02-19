@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- cdn loading bootstrap css, jquery, js -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <title>Responsive portlet-grid with jqueryui and bootstrap</title>
+
+  <style>
+  .portlet {
+    margin: 0 1em 1em 0;
+    padding: 0.3em;
+  }
+  .portlet-header {
+    padding: 0.2em 0.3em;
+    margin-bottom: 0.5em;
+    position: relative;
+  }
+  .portlet-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -8px;
+  }
+  .portlet-content {
+    padding: 0.4em;
+  }
+  .portlet-placeholder {
+    border: 1px dotted black;
+    margin: 0 1em 1em 0;
+    height: 50px;
+  }
+</style>
+
+</head>
+<body>
+  <header class="container">
+    <h1>Responsive portlet-grid with jqueryui and bootstrap</h1>
+  </header>
+  <main role="main" class="container">
+
+    <div class="row">
+
+      <div class="col">
+        <div class="portlet-header">Feeds</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+      </div>
+
+      <div class="col">
+        <div class="portlet-header">News</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col">
+        <div class="portlet-header">Shopping</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col">
+        <div class="portlet-header">Links</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+      </div>
+
+      <div class="col">
+        <div class="portlet-header">Images</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+      </div>
+
+    </div>
+  </main>
+  <footer class="container">
+    References:
+    <ul>
+      <li><a href="http://learn.jquery.com/jquery-ui/getting-started/" target="blank">http://learn.jquery.com/jquery-ui/getting-started/</a></li>
+      <li><a href="https://code.jquery.com/jquery/" target="blank">https://code.jquery.com/jquery/</a></li>
+      <li><a href="https://code.jquery.com/ui/" target="blank">https://code.jquery.com/ui/</a></li>
+      <li><a href="https://jqueryui.com/" target="blank"></a>https://jqueryui.com/</li>
+      <li><a href="http://jqueryui.com/demos/" target="blank">http://jqueryui.com/demos/</a></li>
+      <li><a href="https://getbootstrap.com/docs/4.3/layout/overview/" target="blank">https://getbootstrap.com/docs/4.3/layout/overview/</a></li>
+      <li><a href="https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp" target="blank">https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp</a></li>
+      <li><a href="https://getbootstrap.com/" target="blank">https://getbootstrap.com/</a></li>
+    </ul>
+  </footer>
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+
+
+<script>
+
+$( ".col" ).addClass("portlet");
+
+$( ".row" ).sortable({
+  connectWith: ".row",
+  handle: ".portlet-header",
+  cancel: ".portlet-toggle",
+  placeholder: "col portlet-placeholder ui-corner-all"
+});
+
+$( ".portlet" ).addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" );
+$( ".portlet" ).find( ".portlet-header" ).addClass( "ui-widget-header ui-corner-all" );
+
+</script>

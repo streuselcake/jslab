@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Form and HTTP</title>
+</head>
+<body>
+  <h1>HTML Form and HTTP</h1>
+
+  <!-- A form originally had the purpose to have the browser send data via http(s).
+  On submit, the browser sends a http-request (as if the browser requests a site from the server).
+  The server encodes and attaches the parameters from
+  the form either to the url (method=GET) or to the request body (method=POST). -->
+
+  <!-- When method=GET, we can keep track of the data in the url.
+  This works when the server does not relocate the browser after the request;
+  In this case, javascript can see the sent get-parameters in the query string encoded in the url.-->
+
+  <form action="./formurljs.html" method="get">
+  Firstname:<br>
+  <input id="fninput" type="text" name="firstname"><br>
+  Name:<br>
+  <input id="lninput" type="text" name="lastname"><br>
+  <input type="submit" value="Send" >
+  </form>
+
+<div id="result"></div>
+
+<ul>
+  <li><a target="blank" href="https://www.w3schools.com/html/html_forms.asp">https://www.w3schools.com/html/html_forms.asp</a></li>
+  <li><a target="blank" href="https://www.w3schools.com/js/js_validation.asp">https://www.w3schools.com/js/js_validation.asp</a></li>
+</ul>
+
+</body>
+</html>
+
+<script>
+
+document.onload = readall();
+
+function readall(){
+  "use strict";
+  document.getElementById("result").innerHTML = JSON.stringify(location.search);
+}
+
+</script>

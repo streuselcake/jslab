@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Darksky weather data testing</title>
+</head>
+<body>
+  <h1>Darksky weather data testing</h1>
+  <p>The script at the bottom of this page's html-code does not load any data from the darksky-server, but it uses a copied json-response for testing. Weather Info parsed:</p>
+  <div id="weather-info"></div>
+  <p>Visit the darksky developer page to get your api-key. Then use your api-key with the following request url to see a new response.</p>
+  <pre>
+    <a href="https://api.darksky.net/forecast/API-KEY/37.8267,-122.4233">https://api.darksky.net/forecast/API-KEY/37.8267,-122.4233</a>
+  </pre>
+  <p>The response should compare to the data embedded via</p>
+  <pre>
+    <code>&lt;script src="testdata.js"&gt;&lt;/script&gt;</code>
+  </pre>
+  <p>Note the trick: The embedded script places the response in a variable and exposes the data as a script so that we can test it.</p>
+  References:
+  <ul>
+    <li><a target="blank" href="https://darksky.net/dev">https://darksky.net/dev</a></li>
+    <li><a target="blank" href="https://www.w3schools.com/js/js_ajax_intro.asp">https://www.w3schools.com/js/js_ajax_intro.asp</a></li>
+  </ul>
+
+</body>
+</html>
+
+<script src="../../../_sampledata/darksky-testdata.js"></script>
+<script>document.getElementById("weather-info").innerHTML = weather.currently.summary;</script>

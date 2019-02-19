@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <title>Same Origin Policy (SOP) and Cross Origin Resource Sharing (CORS)</title>
+
+</head>
+<body>
+  <h1>Same Origin Policy (SOP) and Cross Origin Resource Sharing (CORS)</h1>
+  <p>This client-website uses the browser's XMLHttpRequest-object to load data from two different servers.</p>
+
+  <p>Echo-response from SOP-server:</p>
+  <div id="content-sop"></div>
+
+  <p>Echo-response from CORS-server:</p>
+  <div id="content-cors"></div>
+
+</body>
+</html>
+
+<script>
+
+var loc = {
+  "latitude": 51.969431,
+  "longitude": 7.595707,
+};
+
+//send a request of any type (GET, PUT, POST, DELETE).
+var method = "POST";
+
+$.ajax({
+  type: method,
+  url: "http://localhost:8001/echo.html",
+  contentType: "application/json",
+  data: JSON.stringify(loc),
+  dataType: "json", // text //application/json?,
+  success: (response) => {$("#content-sop").text("Response: " + JSON.stringify(response, null, 2));},
+  error: (error) => {$("#content-sop").text("Error: " + JSON.stringify(error, null, 2));},
+  complete: () => {}
+});
+
+$.ajax({
+  type: method,
+  url: "http://localhost:8002/echo.html",
+  contentType: "application/json",
+  data: JSON.stringify(loc),
+  dataType: "json", // text //application/json?,
+  success: (response) => {$("#content-cors").text("Response: " + JSON.stringify(response, null, 2));},
+  error: (error) => {$("#content-cors").text("Error: " + JSON.stringify(error, null, 2));},
+  complete: () => {}
+});
+
+
+</script>

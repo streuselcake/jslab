@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Asynchronous coin flipping (callback)</title>
+
+</head>
+<body>
+  <h1>Callback coin flipping</h1>
+
+  <div id="content"></div>
+
+  <br /><br /><br />
+  References:
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Callback_function" target="blank">https://developer.mozilla.org/en-US/docs/Glossary/Callback_function</a></li>
+    <!-- <li><a href="" target="blank"></a></li> -->
+  </ul>
+
+</body>
+</html>
+
+<!-- try callback-func for running tasks concurrently (tasks that always
+return to your path of execution as expected). Try callback-func-err.js
+instead of callback-func.js to see how things can go wrong with more complex
+tasks (e.g. tasks that can fail or throw up).  -->
+<script src="callback-func.js"></script>
+<!--<script src="callback-func-err.js"></script-->
+
+
+<!-- starts tasks concurrently -->
+<!-- <script src="callback-racing.js"></script>-->
+
+<!-- run tasks concurrently, then waits for them and for one another
+(for example, throwing the same coin so we need to wait until it's back) -->
+<script src="callback-waiting.js"></script>
+
+<!-- note: now you have seen the callback hell -->
