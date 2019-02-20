@@ -1,8 +1,7 @@
 // jshint esversion: 6
 
 
-// wrld3d doesn't cover Münster yet
-// const start_latlng = [lat, lon];
+// wrld3d doesn't cover Germany yet
 
 
 // from wrld example codes:
@@ -22,17 +21,6 @@ var map = L.Wrld.map( "map", token.wrld_token, {
   center: start_latlng,
   zoom: 15
 });
-
-// adding leaflet polylines (from Münster)
-// for (var i = 0; i < linecoordsarray.length; ++i) {
-//   L.polyline(linecoordsarray[i],
-//     {
-//       color: "red",
-//       weight: 3,
-//       opacity: 0.2
-//     }
-//   ).addTo(map);
-// }
 
 
 var polyTerrainLevel = L.Wrld.polyline(polylinePoints, {

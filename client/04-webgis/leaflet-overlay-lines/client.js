@@ -1,8 +1,8 @@
 // jshint esversion: 6
 
 
-const lat = 51.96;
-const lon = 7.59;
+const lat = gpstracks.features[0].geometry.coordinates[0][1];
+const lon = gpstracks.features[0].geometry.coordinates[0][0];
 
 const start_latlng = [lat, lon];
 
@@ -19,14 +19,24 @@ var osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 
 var polylinegroup = [];
-for (var i = 0; i < linecoordsarray.length; ++i) {
-  polylinegroup.push(L.polyline(linecoordsarray[i],
+
+for (var i = 0; i < gpstracks.features.length; ++i) {
+
+  let gejsonline = gpstracks.features[i].geometry.coordinates;
+  let line = [];
+  for(let j=0; j<gejsonline.length; ++j){
+    line.push([gejsonline[j][1],gejsonline[j][0]]);
+  }
+
+  polylinegroup.push(
+    L.polyline(line,
     {
       color: "red",
       weight: 3,
       opacity: 0.2
     }
   ));
+
 }
 
 var heatmap = L.layerGroup(polylinegroup);

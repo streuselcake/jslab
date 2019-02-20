@@ -1,8 +1,9 @@
 // jshint esversion: 6
 
+var trackidx = 1;
 
-const lat = 51.96;
-const lon = 7.59;
+const lat = gpstracks.features[trackidx].geometry.coordinates[0][1];
+const lon = gpstracks.features[trackidx].geometry.coordinates[0][0];
 
 const start_latlng = [lat, lon];
 
@@ -15,20 +16,13 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 
-L.polyline(linecoordsarray[0],
+var gejsonline = gpstracks.features[trackidx].geometry.coordinates;
+var line = [];
+gejsonline.forEach((e, i) => { line.push([gejsonline[i][1],gejsonline[i][0]]); });
+
+L.polyline(line,
   {
     color: "red",
     weight: 3,
   }
 ).addTo(map);
-
-
-// for (var i = 0; i < linecoordsarray.length; ++i) {
-//   L.polyline(linecoordsarray[i],
-//     {
-//       color: "red",
-//       weight: 3,
-//       opacity: 0.2
-//     }
-//   ).addTo(map);
-// }

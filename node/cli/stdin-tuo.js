@@ -21,11 +21,11 @@
 // $ node tostdout out | node stdin-tuo > tuo.txt
 
 
-process.stdin.setEncoding('utf8');
+process.stdin.setEncoding("utf8");
 
 var data = "";
 
-process.stdin.on('data', function(chunk) {
+process.stdin.on("data", function(chunk) {
 
   if (chunk !== null) {
     data += chunk;
@@ -33,7 +33,7 @@ process.stdin.on('data', function(chunk) {
 
 });
 
-process.stdin.on('end', function() {
+process.stdin.on("end", function() {
   // Credits to Sonya Moisset for reversing string reverse
   //https://medium.freecodecamp.org/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb
   console.log(data.split("").reverse().join(""));

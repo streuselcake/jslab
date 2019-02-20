@@ -8,18 +8,21 @@ var viewer = new Cesium.Viewer("cesiumContainer", {
 });
 viewer.scene.globe.depthTestAgainstTerrain = true;
 
-var run = [];
-for (var i = 0; i < linecoordsarray[0].length; ++i) {
-  run.push(linecoordsarray[0][i].lng);
-  run.push(linecoordsarray[0][i].lat);
-  // run.push(50);
+
+
+
+var track = [];
+var trackidx = 1;
+
+for (var i = 0; i < gpstracks.features[trackidx].geometry.coordinates.length; ++i) {
+  track.push(gpstracks.features[trackidx].geometry.coordinates[i][0]);
+  track.push(gpstracks.features[trackidx].geometry.coordinates[i][1]);
 }
 
 var dashedLine = viewer.entities.add({
-    name : 'Blue dashed line',
+    name : "track",
     polyline : {
-      // positions : Cesium.Cartesian3.fromDegreesArrayHeights(run),
-      positions : Cesium.Cartesian3.fromDegreesArray(run),
+      positions : Cesium.Cartesian3.fromDegreesArray(track),
       clampToGround : true,
       width : 5,
       arcType : Cesium.ArcType.RHUMB,
