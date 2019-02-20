@@ -3,19 +3,11 @@
 updateFromCookie();
 
 function save(){
-  console.log("save");
-
-  var x = "firstnme="+document.getElementById("fninput").value + ";" +
-                  "lastname="+document.getElementById("lninput").value;
-  // console.log(x);
-
-  document.cookie = x;
+  document.cookie = "firstnme="+document.getElementById("fninput").value;
+  document.cookie = "lastname="+document.getElementById("lninput").value;
   updateFromCookie();
 }
 
 function updateFromCookie(){
-  // console.log("updateFromCookie");
-  var x = decodeURIComponent(document.cookie);
-
-  document.getElementById("cookiedata").innerHTML=x;
+  document.getElementById("cookiedata").innerHTML = decodeURIComponent(document.cookie);
 }
