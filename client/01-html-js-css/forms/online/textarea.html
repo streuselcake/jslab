@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML textarea</title>
+</head>
+<body>
+  <h1>HTML textarea</h1>
+
+
+<textarea id="readtext">insert text</textarea>
+<button type="button" onclick="insertText()">insert text</button>
+<div id="myText"></div>
+
+<ul>
+  <li><a target="blank" href="https://www.w3schools.com/html/html_forms.asp">https://www.w3schools.com/jsref/dom_obj_textarea.asp</a></li>
+  <li><a target="blank" href="https://www.w3schools.com/html/html_forms.asp">https://www.w3schools.com/html/html_forms.asp</a></li>
+</ul>
+
+</body>
+</html>
+
+<script>
+  function insertText(){
+    var t = document.getElementById("readtext").value;
+    document.getElementById("myText").innerHTML = t;
+  }
+</script>
