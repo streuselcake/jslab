@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="countUP()">Up</button>
+<div id="mySum"></div>
+</body>
+</html>
+
+<script>
+
+var myCount = 0;
+
+function countUP(){
+  myCount+=1;
+  document.getElementById("mySum").innerHTML = myCount;
+}
+
+</script>

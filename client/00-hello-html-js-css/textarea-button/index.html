@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <title>Title</title>
+</head>
+<body>
+  <textarea id="readtext">your text here</textarea>
+  <button type="button" onclick="insertText()">insert</button>
+  <div id="myText"></div>
+</body>
+</html>
+
+<script>
+
+var myCount = 0;
+
+function insertText(){
+  var t = document.getElementById("readtext").value;
+  document.getElementById("myText").innerHTML = t;
+}
+
+
+</script>
