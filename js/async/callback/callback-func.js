@@ -1,6 +1,6 @@
 // jshint esversion: 6
 
-// doing something and call back 'resolve' 
+// doing something and call back 'resolve'
 function isHeadsThrowHigh(taskid, resolve){
 
   let time = Math.floor(Math.random() * (5000 - 2000)) + 2000; // random time between 2000 and 5000 to wait
