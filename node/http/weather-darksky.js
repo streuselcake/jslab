@@ -12,10 +12,14 @@ var long = 7.595707;
 
 
 // using darksky https://darksky.net/dev/docs
-var DARKSKY_KEY = require(__dirname + "/../../_api-token/token.js").DARKSKY_KEY;
+var DARKSKY_KEY = require(__dirname + "/../../_api-token/token.js").token.DARKSKY_KEY;
 
+// console.dir(require(__dirname + "/../../_api-token/token.js"));
 
 var darksky_path = "https://api.darksky.net/forecast/"+DARKSKY_KEY+"/"+lat+","+long;
+
+console.log(darksky_path);
+
 https.get(darksky_path, (response) => {
 
   //console.dir(response);

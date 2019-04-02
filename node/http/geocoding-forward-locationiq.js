@@ -26,7 +26,7 @@ var search_text = encodeURIComponent("Heisenbergstraße 2, 48149 Muenster");
 //        (Note individual restrictions)
 
 
-var LOCATIONIQ_TOKEN = require(__dirname + "/../../_api-token/token.js").LOCATIONIQ_TOKEN;
+var LOCATIONIQ_TOKEN = require(__dirname + "/../../_api-token/token.js").token.LOCATIONIQ_TOKEN;
 
 var path_locationiq = "https://eu1.locationiq.com/v1/search.php"+
                         "?key="+LOCATIONIQ_TOKEN+"&q="+search_text+"&format=json";

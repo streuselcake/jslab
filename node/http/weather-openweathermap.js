@@ -13,7 +13,7 @@ var long = 7.595707;
 
 // using openweathermap https://openweathermap.org/api
 
-var OPENWEATHERMAP_TOKEN = require(__dirname + "/../../_api-token/token.js").OPENWEATHERMAP_TOKEN;
+var OPENWEATHERMAP_TOKEN = require(__dirname + "/../../_api-token/token.js").token.OPENWEATHERMAP_TOKEN;
 
 
 var openweathermap_path = "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+long+"&appid="+OPENWEATHERMAP_TOKEN;

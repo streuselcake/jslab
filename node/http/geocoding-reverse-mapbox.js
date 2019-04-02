@@ -23,7 +23,7 @@ var latitude = 51.963528;
 //        - forbidden to store the data returned from the api endpoint
 //        - forbidden to use the data other than showing it in a mapbox map
 
-var MAPBOX_TOKEN = require(__dirname + "/../../_api-token/token.js").MAPBOX_TOKEN;
+var MAPBOX_TOKEN = require(__dirname + "/../../_api-token/token.js").token.MAPBOX_TOKEN;
 
 var mapbox_path = "https://api.tiles.mapbox.com/geocoding/v5/mapbox.places/"+
 longitude+","+latitude+".json?access_token="+MAPBOX_TOKEN;

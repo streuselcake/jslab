@@ -13,7 +13,7 @@ const https = require("https");
 
 var STRAVA_ACCESS_TOKEN = process.env.STRAVA_ACCESS_TOKEN ?
                               process.env.STRAVA_ACCESS_TOKEN :
-                              require(__dirname + "/../.._api-token/token.js").STRAVA_ACCESS_TOKEN;
+                              require(__dirname + "/../../_api-token/token.js").token.STRAVA_ACCESS_TOKEN;
 
 const options = {
   hostname: "www.strava.com",
