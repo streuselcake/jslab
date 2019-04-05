@@ -18,8 +18,8 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 var gejsonline = gpstracks.features[trackidx].geometry.coordinates;
 var line = [];
-gejsonline.forEach((e, i) => { line.push([gejsonline[i][1],gejsonline[i][0]]); });
-console.log(JSON.stringify(line));
+gejsonline.forEach((e) => { line.push([e[1],e[0]]); });
+//console.log(JSON.stringify(line));
 
 // extracted splitpoints
 var split = [];
