@@ -2,7 +2,9 @@
 // jshint node: true
 "use strict";
 
-
+// most common use
+var f = require("./func.js").f;
+f();
 
 // require installed modules
 require("fs");
@@ -22,7 +24,7 @@ require("./code.js");
 require("./more");
 
 // can also require json (because it's a subset of js)
-console.dir(require("./package"));
+//console.dir(require("./package"));
 
 
 // Excursus: One perhaps remembers: when not using line breaks (which in js need escape sequences),

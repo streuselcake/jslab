@@ -7,6 +7,7 @@
 var fs = require("fs");
 
 const filename = "data.json";
+const filename2 = "datawrite.json";
 const nofilename = "nofile.txt";
 
 // we will read and write with data and data2
@@ -38,7 +39,17 @@ data2 = {
   "size": 1,
   "type": "B"
 };
-//fs.writefile()...
+
+// write file
+const writedata = JSON.stringify(data2);
+fs.writeFile(filename2, writedata, (err) => {
+  if (err) {
+    console.error(err);
+  } else{
+    console.log("Stored in " + filename2 + ": " + writedata);
+  }
+});
+
 
 
 
