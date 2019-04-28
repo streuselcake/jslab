@@ -7,10 +7,9 @@ var fs = require("fs");
 console.log("start code");
 
 var data = "";
-fs.readFile("file.txt", "utf-8", (err, data) => {
-  if (!err) {
-    console.log(data);
-  }
+fs.readFile("file.txt", "utf-8",
+                 (err, data) => {
+  if (!err) { console.log(data); }
 });
 
 process.stdin.on("end",() => {
