@@ -15,8 +15,6 @@ var osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 var drawnItems = L.featureGroup().addTo(map);
 
-
-
 map.addControl(new L.Control.Draw({
     edit: {
         featureGroup: drawnItems,
@@ -24,6 +22,7 @@ map.addControl(new L.Control.Draw({
             allowIntersection: false
         }
     },
+
     draw: {
         polygon: {
             allowIntersection: false,
