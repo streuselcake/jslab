@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <title>Ajax Request</title>
+</head>
+<body>
+  <h1>Add Item (AJAX)</h1>
+  <form>
+    Item:<br />
+    <input type="text" name="item" id="itemname" /><br>
+    Description:<br />
+    <input type="text" name="description" id="itemdescription" /><br>
+    <br />
+    <button type="Button" id="sendajax">Send</button>
+  </form>
+  <div id="content"></div>
+</body>
+</html>
+
+<script>
+var resource = "http://127.0.0.1:3000/";
+
+$("#sendajax").click(function (){
+
+  $.ajax({
+    url: resource, // URL der Abfrage,
+    data: {
+      description: $("#itemdescription").val(),
+      item: $("#itemname").val()
+    },
+    type: "GET"
+  })
+  .done (function( response) {
+    $("#content").text(response);
+  })
+  .fail (function( xhr, status, errorThrown ) {
+    // handle errors
+  })
+  .always (function( xhr, status ) {
+    // completed ajax
+  });
+
+});
+
+
+</script>

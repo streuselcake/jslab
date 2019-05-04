@@ -4,7 +4,7 @@
 
 var http = require("http");
 var host = "127.0.0.1";
-var port = 2004;
+var port = 3000;
 
 var fs = require("fs");
 

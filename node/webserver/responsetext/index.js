@@ -4,7 +4,7 @@
 
 var http = require("http");
 var host = "127.0.0.1";
-var port = 2000;
+var port = 3000;
 
 
 
@@ -18,11 +18,11 @@ const server = http.createServer( (request, response) => {
   //     using .writeHead() or .setHeader()
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type
 
-  // ... a commonly used request content-types:
+  // ... commonly used request content-types:
   // application/x-www-form-urlencoded; charset=utf-8
   // application/json, */*
 
-  // ... a commonly used request accept-types:
+  // ... commonly used request accept-types:
   // application/x-www-form-urlencoded; charset=utf-8
   // application/json, */*
 
