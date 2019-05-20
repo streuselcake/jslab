@@ -1,5 +1,5 @@
 
-Generating a Node/Express Webapp
+#Generating a Node/Express Webapp
 
 This readme provides a walkthrough for generating a nicely structured webapp with Node and Express and then also looks at the anatomy of the generated app.
 
