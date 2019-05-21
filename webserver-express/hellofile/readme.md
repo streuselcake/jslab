@@ -32,4 +32,36 @@ http://localhost:3000/
 https://expressjs.com/de/starter/installing.html
 
 
-(to be updated soon adding germand)
+
+## Hellofile Webapp mit Express Bedienungsanleitung (Deutsch)
+
+#### 1. Schritt
+
+Navigieren sie mit der Befehlszeile in den hellofile Ordner:
+
+    cd /yourpath/webserver-express/hellofile
+
+#### 2. Schritt
+
+In die index.js Datei wurde schon etwas hellofile-code kopiert. Nutzen sie die folgenden Befehle, um den Code laufen zu lassen:
+
+    npm init  
+    npm install express --save
+
+
+#### 3. Schritt
+
+Starten sie ihren Server mit dem folgenden Befehl:
+
+    node .
+
+
+#### 4. Schritt
+
+Öffnen sie die Webapp, indem sie folgenden Link benutzen:
+
+http://localhost:3000/
+
+#### Zusätzliches Lesematerial
+
+https://expressjs.com/de/starter/installing.html
