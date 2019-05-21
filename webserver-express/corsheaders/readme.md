@@ -6,7 +6,7 @@
 
 Navigate the commandline into the corsheaders folder:
 
-    cd /yourpath/express-corsheaders
+    cd /yourpath/webserver-express/corsheaders
 
 #### Step 2
 
@@ -32,4 +32,35 @@ http://localhost:3000/
 https://expressjs.com/de/starter/installing.html
 
 
-(to be updated soon adding germand)
+## Corsheaders Webapp mit Express Bedinungsanleitung (Deutsch)
+
+#### 1. Schritt
+
+Navigieren sie mit der Commandline in den corsheaders Ordner:
+
+    cd /yourpath/webserver-express/corsheaders
+
+#### 2. Schritt
+
+In die index.js Datei wurde schon etwas corsheaders-code kopiert. Nutzen sie folgende Commands um den Code laufen zu lassen:
+
+    npm init  
+    npm install express --save
+
+
+#### 3. Schritt
+
+Starten sie ihren Server mit der folgenden Command:
+
+    node .
+
+
+#### 4. Schritt
+
+Öffnen sie die Webapp, indem sie folgenden Link benutzen:
+
+http://localhost:3000/
+
+#### Zusätzliches Lesematerial
+
+https://expressjs.com/de/starter/installing.html
