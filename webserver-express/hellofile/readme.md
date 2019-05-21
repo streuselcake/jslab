@@ -4,9 +4,9 @@
 
 #### Step 1
 
-Navigate the commandline into the helloworld folder:
+Navigate the commandline into the hellofile folder:
 
-    cd /yourpath/express-helloworld
+    cd /yourpath/webserver-express/hellofile
 
 #### Step 2
 
