@@ -13,7 +13,7 @@ Navigate the commandline into the log-client-jsnlog folder:
 You will find some log-client-jsnlog-code has already been copied to the index.js file. Use these commands to run it:
 
     npm init  
-    npm install express --save
+    npm install --save express jsnlog jsnlog-nodejs
 
 #### Step 3
 
@@ -47,7 +47,7 @@ Navigieren sie mit der Befehlszeile in den log-client-jsnlog Ordner:
 In die index.js Datei wurde schon etwas log-client-jsnlog-code kopiert. Nutzen sie die folgenden Befehle, um den Code laufen zu lassen:
 
     npm init  
-    npm install express --save
+    npm install --save express jsnlog jsnlog-nodejs
 
 
 #### 3. Schritt
