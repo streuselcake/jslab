@@ -6,7 +6,7 @@
 
 Navigate the commandline into the helloworld folder:
 
-    cd /yourpath/express-helloworld
+    cd /yourpath/webserver-express/helloworld
 
 #### Step 2
 
