@@ -13,7 +13,7 @@ Navigate the commandline into the corspackage folder:
 You will find some corspackage-code has already been copied to the index.js file. Use these commands to run it:
 
     npm init  
-    npm install express --save
+    npm install --save express cors
 
 #### Step 3
 
@@ -47,7 +47,7 @@ Navigieren sie mit der Befehlszeile in den corspackage Ordner:
 In die index.js Datei wurde schon etwas corspackage-code kopiert. Nutzen sie die folgenden Befehle, um den Code laufen zu lassen:
 
     npm init  
-    npm install express --save
+    npm install --save express cors
 
 
 #### 3. Schritt
