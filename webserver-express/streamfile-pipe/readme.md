@@ -60,14 +60,14 @@ In die index.js Datei wurde schon etwas streamfile-pipe-code kopiert. Nutzen sie
 
 Starte den streamfile-example server port 8000
 
-#### 3. Schritt
+#### 4. Schritt
 
 Starten sie ihren Server mit dem folgenden Befehl:
 
     node . http://localhost:8000
 
 
-#### 4. Schritt
+#### 5. Schritt
 
 Öffnen sie die Webapp, indem sie folgenden Link benutzen:
 
