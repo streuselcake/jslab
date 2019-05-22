@@ -42,7 +42,7 @@ https://expressjs.com/de/starter/installing.html
 
 Navigieren sie mit der Befehlszeile in den request-form Ordner:
 
-    cd /yourpath/webserver-express/request-form
+    cd /Deinpfad/webserver-express/request-form
 
 #### 2. Schritt
 
