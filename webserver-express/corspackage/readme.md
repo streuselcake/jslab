@@ -40,7 +40,7 @@ https://expressjs.com/de/starter/installing.html
 
 Navigieren sie mit der Befehlszeile in den corspackage Ordner:
 
-    cd /yourpath/webserver-express/corspackage
+    cd /Deinpfad/webserver-express/corspackage
 
 #### 2. Schritt
 
