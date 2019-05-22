@@ -42,7 +42,7 @@ https://expressjs.com/de/starter/installing.html
 
 Navigieren sie mit der Befehlszeile in den request-proxy Ordner:
 
-    cd /yourpath/webserver-express/request-proxy
+    cd /Deinpfad/webserver-express/request-proxy
 
 #### 2. Schritt
 
