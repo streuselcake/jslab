@@ -6,7 +6,7 @@
 
 Navigate the commandline into the public folder:
 
-    cd /yourpath/webserver-express/public
+    cd /Deinpfad/webserver-express/public
 
 #### Step 2
 
