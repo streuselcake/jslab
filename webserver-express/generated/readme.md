@@ -14,7 +14,7 @@ You will be shown how express composes:
 
 #### Step 1
 
-Before we generate a webapp, first check the installed versions of node and npm using the following commands:
+Before generating the webapp, first check the installed versions of node and npm using the following commands:
 
 
         node -v
@@ -22,7 +22,7 @@ Before we generate a webapp, first check the installed versions of node and npm 
 
 
 
-Install or update Node and NPM if needed.
+Install or update Node and npm if needed.
 
 #### Step 2
 
@@ -41,7 +41,7 @@ The express generator can be installed using the commands below (Note: this inst
 
 #### Step 4
 
-Generate the webapp (name it, e.g. express-gen). Note that the cli-command depends on the current path of the prompt.
+Generate and name the webapp with the commands below. Note that the cli-command depends on the current path of the prompt.
 
 
         #create app with pug as template engine (cli current folder is parent folder)
@@ -135,11 +135,51 @@ Here you can observe that routes that start with '/' and '/users' are handled by
 
 This shows how the server response is triggered. Here the webapp calls the renderer to deliver the html page for the index.xxx-template in the view folder.
 
-You are now ready to add middleware, extend the routes and create your own routes.
+You are now ready to expand on the scope of your webapp.
 
 For reference, see the express docs https://expressjs.com/de/4x/api.html .
 
 #### Additional Reading
+
+https://zellwk.com/blog/crud-express-mongodb/
+https://closebrace.com/tutorials/2017-03-02/the-dead-simple-step-by-step-guide-for-front-end-developers-to-getting-up-and-running-with-nodejs-express-and-mongodb
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs
+
+---
+
+## Erzeugen einer Node/Express Webapp (Deutsch)
+
+Diese Readme besteht aus einer Schritt für Schritt anleitung um eine Node/Express Webapp zu erzeugen, als auch eine kurze Einführung in die Struktur dieser Webapp.
+
+#### 1. Schritt
+
+Vor der erzeugung der Webapp, überprüfen sie die installierten Versionen von Node und npm mit folgenden Befehlen:
+
+
+        node -v
+        npm -v
+
+Installieren oder updaten sie Node und npm falls nötig.
+
+#### 2. Schritt
+
+Navigiere die Befehlszeile in den Ordner wo Express die Webapp erzeugen soll:
+
+    cd /Deinpfad/DeinOrdner
+
+#### 3. Schritt
+
+Den Express Generator können sie mit folgenden Befehlen installieren, beachten sie das der Generator sowohl Lokal als auch Global installiert werden kann:
+
+    #Installiere express-generator Global (mit -v)
+    npm install express-generator -g
+
+#### 4. Schritt
+
+
+#### Einführung in die erzeugten Strukturen
+
+#### Zusätzliches Lesematerial
 
 https://zellwk.com/blog/crud-express-mongodb/
 https://closebrace.com/tutorials/2017-03-02/the-dead-simple-step-by-step-guide-for-front-end-developers-to-getting-up-and-running-with-nodejs-express-and-mongodb
