@@ -40,7 +40,7 @@ https://expressjs.com/de/starter/installing.html
 
 Navigieren sie mit der Befehlszeile in den log-req-morgan Ordner:
 
-    cd /yourpath/webserver-express/log-req-morgan
+    cd /Deinpfad/webserver-express/log-req-morgan
 
 #### 2. Schritt
 
