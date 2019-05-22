@@ -42,7 +42,7 @@ https://expressjs.com/de/starter/hello-world.html
 
 Navigieren sie mit der Befehlszeile in den helloworld Ordner:
 
-    cd /yourpath/webserver-express/helloworld
+    cd /Deinpfad/webserver-express/helloworld
 
 #### 2. Schritt
 
