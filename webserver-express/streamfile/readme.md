@@ -40,7 +40,7 @@ https://expressjs.com/de/starter/installing.html
 
 Navigieren sie mit der Befehlszeile in den streamfile Ordner:
 
-    cd /yourpath/webserver-express/streamfile
+    cd /Deinpfad/webserver-express/streamfile
 
 #### 2. Schritt
 
@@ -54,7 +54,7 @@ In die index.js Datei wurde schon etwas streamfile-code kopiert. Nutzen sie die 
 
 Starten sie ihren Server mit dem folgenden Befehl:
 
-    node . <Pfad zu deiner .mp4 Datei>
+    node . <Pfad zu ihrer .mp4 Datei>
 
 
 #### 4. Schritt
