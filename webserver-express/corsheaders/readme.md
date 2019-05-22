@@ -40,7 +40,7 @@ https://expressjs.com/de/starter/installing.html
 
 Navigieren sie mit der Befehlszeile in den corsheaders Ordner:
 
-    cd /yourpath/webserver-express/corsheaders
+    cd /Deinpfad/webserver-express/corsheaders
 
 #### 2. Schritt
 
