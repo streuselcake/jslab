@@ -46,7 +46,7 @@ https://expressjs.com/de/guide/using-middleware.html
 
 Navigieren sie mit der Befehlszeile in den middleware Ordner:
 
-    cd /yourpath/webserver-express/middleware
+    cd /Deinpfad/webserver-express/middleware
 
 #### 2. Schritt
 
