@@ -42,7 +42,7 @@ https://expressjs.com/de/starter/installing.html
 
 Navigieren sie mit der Befehlszeile in den router Ordner:
 
-    cd /yourpath/webserver-express/router
+    cd /Deinpfad/webserver-express/router
 
 #### 2. Schritt
 
