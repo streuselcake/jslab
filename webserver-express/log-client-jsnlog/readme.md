@@ -40,7 +40,7 @@ https://expressjs.com/de/starter/installing.html
 
 Navigieren sie mit der Befehlszeile in den log-client-jsnlog Ordner:
 
-    cd /yourpath/webserver-express/log-client-jsnlog
+    cd /Deinpfad/webserver-express/log-client-jsnlog
 
 #### 2. Schritt
 
