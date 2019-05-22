@@ -39,7 +39,7 @@ https://expressjs.com/de/starter/installing.html
 
 Navigieren sie mit der Befehlszeile in den hellofile Ordner:
 
-    cd /yourpath/webserver-express/hellofile
+    cd /Deinpfad/webserver-express/hellofile
 
 #### 2. Schritt
 
