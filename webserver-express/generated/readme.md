@@ -14,7 +14,7 @@ You will be shown how express composes:
 
 #### Step 1
 
-Before generating the webapp, first check the installed versions of node and npm using the following commands:
+Before generating the webapp, first check the installed versions of Node and NPM using the following commands:
 
 
         node -v
@@ -22,7 +22,7 @@ Before generating the webapp, first check the installed versions of node and npm
 
 
 
-Install or update Node and npm if needed.
+Install or update Node and NPM if needed.
 
 #### Step 2
 
@@ -56,16 +56,15 @@ Generate and name the webapp with the commands below. Note that the cli-command 
 
 
 
-While NPM installs the dependencies, it also checks for available updates. Depending on the output on the terminal it may be advisable to run npm audit and/or run npm audit fix to address security issues with old package versions.
+While NPM installs the dependencies, it also checks for available updates. Depending on the output on the terminal it may be advisable to run `npm audit` and/or run `npm audit fix` to address security issues with old package versions.
 
-Note the response from express, when it starts the server:
+Note the response from express, when the server is started:
 
     DEBUG=nodeserver-express:* npm start.
     
-Alternatively run the server without debugging via `npm start` (without setting the environment variable for debugging), using the start script in package.json, or use the command from the script `node ./bin/www denoted` by the startscript in the package.json (entrypoint).
+Alternatively run the server without debugging via `npm start` (without setting the environment variable for debugging), using the start script in package.json, or use the command from the script `node ./bin/www` denoted by the startscript in the package.json (entrypoint).
 
-After starting the server, the webapp is available via: http://127.0.0.1:3000/
-The webapp also has a route defined for: http://127.0.0.1:3000/users/
+After starting the server, the webapp is available via: http://127.0.0.1:3000/ or http://127.0.0.1:3000/users/ .
 
 #### Exploration of the generated Structures
 
@@ -176,6 +175,27 @@ Den Express Generator können sie mit folgenden Befehlen installieren, beachten 
 
 #### 4. Schritt
 
+Erzeuge und benenne die Webapp mit folgenden Befehlen, beachten sie das der cli-Befehl von dem momentanen Pfad abhängt:
+
+        #Erzeuge App mit pug als template engine (cli momentaner Ordener is parent Ordner)
+        express express-gen --view="pug"
+
+        ##von innerhalb eines ausgesuchten Ordners:
+        #express ../generated --view="pug"
+
+        #Installiere die Abhängigkeiten
+        cd express-gen
+        npm install
+
+Während NPM die Abhängigkeiten installiert wird automatisch nach Updates geprüft. In abhängigkeit von dem output im Terminal kann es empfelbar sein die Befehle `npm audit` und/oder `npm audit fix` auszuführen.
+
+Beachten sie das output von Express, wenn sie den Server starten:
+
+    DEBUG=nodeserver-express:* npm start.
+    
+Alternativ können sie den Server auch mit dem Befehl `npm start` starten (ohne die Umgebungseinstellung für Debugging), unter verwendung des start Skript in package.json, oder sie benutzen den Befehl von dem Skript `node ./bin/www`.
+
+Nachdem sie den Server gestartet haben, können sie die Webapp unter http://127.0.0.1:3000/ oder http://127.0.0.1:3000/users/ .
 
 #### Einführung in die erzeugten Strukturen
 
