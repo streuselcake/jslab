@@ -84,7 +84,7 @@ Starten sie ihren Server mit dem folgenden Befehl:
 
 http://localhost:3000/
 
-Sie können jetzt POST, PUT, DELETE oder GET Befehle machen, durch die Webdeveloper Tools ihres Browsers. Wenn sie die richtigen Befehle haben können sie somit auch Websiten erstellen.
+Sie können jetzt POST, PUT, DELETE oder GET Anforderungen machen, durch die Webdeveloper Tools ihres Browsers. Auf ähnliche weise können sie somit auch Websiten erstellen.
 
 #### Zusätzliches Lesematerial
 
