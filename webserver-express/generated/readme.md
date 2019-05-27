@@ -4,14 +4,6 @@
 
 This readme provides a step-by-step walkthrough for generating a nicely structured webapp with Node and Express. In addition there will also be a short examination of the structure of the generated app.
 
-You will be shown how express composes:
-
-* a ready to use webserver
-* basic middleware
-* example routes
-* a template engine for rendering html
-* example templates
-
 #### Step 1
 
 Before generating the webapp, first check the installed versions of Node and NPM using the following commands:
