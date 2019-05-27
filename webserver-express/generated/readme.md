@@ -118,7 +118,7 @@ Note here, that the app object is passed to the .createServer()-function. It wil
 
 
 
-Here you can observe that routes that start with '/' and '/users' are handled by the route groups indexRouter and usersRouter respectively. Thus the next files to look into is routes/index.js.
+Here you can observe that routes that start with '/' and '/users' are handled by the route groups indexRouter and usersRouter respectively. Thus the next file to look into is routes/index.js.
 
 
         // ...
@@ -141,7 +141,11 @@ For reference, see the express docs https://expressjs.com/de/4x/api.html .
 #### Additional Reading
 
 https://zellwk.com/blog/crud-express-mongodb/
+
+
 https://closebrace.com/tutorials/2017-03-02/the-dead-simple-step-by-step-guide-for-front-end-developers-to-getting-up-and-running-with-nodejs-express-and-mongodb
+
+
 https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs
 
 ---
@@ -199,7 +203,81 @@ Nachdem sie den Server gestartet haben, können sie die Webapp unter http://127.
 
 #### Einführung in die erzeugten Strukturen
 
-(Wird in nächstem update ergänzt)
+Sie können die erzeugte entrypoint Datei, von dem Programm nodeserver-express/bin/www , öffnen um mehr über die erzeugte Webapp zu erfahren:
+
+
+        /**
+        * Module dependencies.
+        */
+
+        var app = require('../app');
+
+        // ...
+
+        /**
+        * Create HTTP server.
+        */
+
+        var server = http.createServer(app);
+
+        // ...
+        
+Hier können sie sehen dass das App Objekt an die .createServer() Funktion gereicht wird. Diese Funktion bestimmt auch, wie mit den handle requests, send responses... etc. der Webapp verfahren wird. Auf das App Objekt können sie auch durch die export Variable in '../app.js' zugreifen. In '../app.js' können sie auch zusätzlich etwas über die '/' und '/users/' Pfade rausfinden.
+
+
+        // ...
+        var express = require('express');
+
+        // ...
+
+        var indexRouter = require('./routes/index');
+        var usersRouter = require('./routes/users');
+
+        // ...
+
+        var app = express();
+
+
+        // ...
+
+        app.use('/', indexRouter);
+        app.use('/users', usersRouter);
+
+        // ...
+
+        module.exports = app;
+        
+Bemerken sie hier, das Routen die mit '/' und '/users' anfangen von den Routen Gruppen indexRouter und usersRouter respektiv übernommen werden. Die nächste Datei die es zu betrachten gilt ist die routes/index.js Datei.
+
+        // ...
+
+        /* GET home page. */
+        router.get('/', function(req, res, next) {
+          res.render('index', { title: 'Express' });
+        });:
+
+        // ...
+        
+Dies zeigt ihnen wie die response des Servers ausgelöst wird. Hier ruft die Webapp den renderer auf und liefert damit die html Seite für index.xxx-template , die sich im view Ordner befindet.
+
+Sie sind jetzt vorbereitet um über erweiterte Funktionen ihrer Webapp zu lernen.
+
+Als referenz, steht die express Dokumentation zur verfügung:
+https://expressjs.com/de/4x/api.html
+
+#### Weiterführendes Lesematerial
+
+https://zellwk.com/blog/crud-express-mongodb/
+
+
+https://closebrace.com/tutorials/2017-03-02/the-dead-simple-step-by-step-guide-for-front-end-developers-to-getting-up-and-running-with-nodejs-express-and-mongodb
+
+
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs
+
+
+
+
 
 #### Zusätzliches Lesematerial
 
