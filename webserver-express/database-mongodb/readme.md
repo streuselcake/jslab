@@ -34,9 +34,9 @@ http://localhost:3000/
 
 You can now make POST, PUT, DELETE or GET requests via the browsers webdeveloper tools, using a http tool, or create your websites with forms sending the requests. Read the source code to find the routes or continue with the exercise.
 
-#### Exercise
+# Exercise
 
-# To get started with the example, try the following commands.
+To get started with the example, try the following commands.
 
 open a shell and navigate to project folder (in which the data folder should be created)
 
@@ -123,54 +123,3 @@ https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
 
 http://mongodb.github.io/node-mongodb-native/3.1/tutorials/crud/
 
-## Corsheaders Webapp mit Express Bedienungsanleitung (Deutsch)
-
-#### 1. Schritt
-
-Installieren und starten sie einen mongodb Server.
-
-#### 2. Schritt
-
-Navigieren sie mit der Befehlszeile in den corsheaders Ordner:
-
-    cd /Deinpfad/webserver-express/database-mongodb
-
-#### 3. Schritt
-
-In die index.js Datei wurde schon etwas mongodb-code kopiert. Nutzen sie die folgenden Befehle, um den Code laufen zu lassen:
-
-    npm init  
-    npm install express --save
-    npm install mongodb --save
-
-
-#### 4. Schritt
-
-Starten sie ihren Server mit dem folgenden Befehl:
-
-    node .
-
-
-#### 5. Schritt
-
-Öffnen sie die Webapp, indem sie folgenden Link benutzen:
-
-http://localhost:3000/
-
-Sie können jetzt POST, PUT, DELETE oder GET Anforderungen machen, durch die Webdeveloper Tools ihres Browsers. Auf ähnliche weise können sie somit auch Websiten erstellen.
-
-#### Zusätzliches Lesematerial
-
-https://expressjs.com/de/starter/installing.html
-
-
-https://www.w3schools.com/nodejs/nodejs_mongodb.asp
-
-
-https://expressjs.com/de/guide/database-integration.html
-
-
-https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
-
-
-http://mongodb.github.io/node-mongodb-native/3.1/tutorials/crud/
