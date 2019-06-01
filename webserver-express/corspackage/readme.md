@@ -23,9 +23,7 @@ Start your server, by using the following command:
 
 #### Step 4
 
-Open the webapp by using the following link:
-
-http://localhost:6000/
+Open the webapp (index.html) from the filesystem or using a different server that delivers the index.html; Note that the index.html uses ajax to call http://localhost:4000/echo.html
 
 #### Additional Reading:
 
@@ -59,9 +57,7 @@ Starten sie ihren Server mit dem folgenden Befehl:
 
 #### 4. Schritt
 
-Öffnen sie die Webapp, indem sie folgenden Link benutzen:
-
-http://localhost:3000/
+Open the webapp (index.html) from the filesystem or using a different server that delivers the index.html; Note that the index.html uses ajax to call http://localhost:4000/echo.html
 
 #### Zusätzliches Lesematerial
 
