@@ -23,9 +23,9 @@ Start your server, by using the following command:
 
 #### Step 4
 
-Open the webapp by using the following link: 
+Open the webapp by using the following link:
 
-http://localhost:3000/
+http://localhost:6000/
 
 #### Additional Reading:
 
