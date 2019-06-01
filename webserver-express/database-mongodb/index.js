@@ -110,7 +110,7 @@ app.get("/item", (req, res) => {
 app.post("/item", (req, res) => {
   // insert item
   console.log("insert item ");
-  app.locals.db.collection('item').insertOne(req.body, function(error, result) {
+  app.locals.db.collection('item').insertOne(req.body, (error, result) => {
     if(error){
       console.dir(error);
     }
@@ -121,8 +121,10 @@ app.post("/item", (req, res) => {
 app.put("/item", (req, res) => {
   // update item
   console.log("update item " + req.body._id);
-  delete req.body._id; // => { name:req.body.name, description:req.body.description }
-  app.locals.db.collection('item').updateOne({_id:new mongodb.ObjectID(req.body._id)}, {$set: req.body}, function(error, result) {
+  let id = req.body._id;
+  delete req.body._id;
+  console.log(req.body); // => { name:req.body.name, description:req.body.description }
+  app.locals.db.collection('item').updateOne({_id:new mongodb.ObjectID(id)}, {$set: req.body}, (error, result) => {
     if(error){
       console.dir(error);
     }
@@ -134,7 +136,7 @@ app.delete("/item", (req, res) => {
   // delete item
   console.log("delete item " + req.body._id);
   let objectId = "ObjectId(" + req.body._id + ")";
-  app.locals.db.collection('item').deleteOne({_id:new mongodb.ObjectID(req.body._id)}, function(error, result) {
+  app.locals.db.collection('item').deleteOne({_id:new mongodb.ObjectID(req.body._id)}, (error, result) => {
     if(error){
       console.dir(error);
     }
