@@ -111,14 +111,14 @@ also monitor the webserver output and changes in mongo
 
 https://expressjs.com/de/starter/installing.html
 
+https://expressjs.com/de/guide/database-integration.html
+
+https://docs.mongodb.com/manual/administration/install-community/ (follow up, e.g. for MacOS: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)
 
 https://www.w3schools.com/nodejs/nodejs_mongodb.asp
 
-
-https://expressjs.com/de/guide/database-integration.html
-
-https://docs.mongodb.com/manual/administration/install-community/
-Fllow up from here (e.g. for MacOS): https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
-
 http://mongodb.github.io/node-mongodb-native/3.1/tutorials/crud/
 
+https://zellwk.com/blog/crud-express-mongodb/
+
+https://closebrace.com/tutorials/2017-03-02/the-dead-simple-step-by-step-guide-for-front-end-developers-to-getting-up-and-running-with-nodejs-express-and-mongodb
