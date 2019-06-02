@@ -117,9 +117,8 @@ https://www.w3schools.com/nodejs/nodejs_mongodb.asp
 
 https://expressjs.com/de/guide/database-integration.html
 
-
-https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
-
+https://docs.mongodb.com/manual/administration/install-community/
+Fllow up from here (e.g. for MacOS): https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
 
 http://mongodb.github.io/node-mongodb-native/3.1/tutorials/crud/
 
