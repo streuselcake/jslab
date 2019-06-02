@@ -38,43 +38,42 @@ You can now make POST, PUT, DELETE or GET requests via the browsers webdeveloper
 
 To get started with the example, try the following commands.
 
-open a shell and navigate to project folder (in which the data folder should be created)
+Open a new shell and navigate to project folder (in which the data folder should be created):
 
     cd /Data/workspace-javascript/jslab/webserver-express/database-mongodb
 
-create the data folder
+Create the data folder:
 
     mkdir data
 
-start mongod (later stop via ctrl+c)
+Start mongod (later stop via ctrl+c):
 
     mongod --dbpath=./data
 
-open new shell, start mongo, connect (later use ctrl+ to stop)
+Open a new shell, start mongo, connect (later use ctrl+ to stop):
 
     mongo --host 127.0.0.1:27017
     show databases
 
-operate on / create collection
+Operate on / create item-database "itemdb".
 
     use itemdb
     show collections
 
-inspect collection content
+Inspect the item-collection content (empty if the database was just created):
 
     db.item.find().pretty()
 
-you can also use the item name or other parameters to search for specific items.
+You can also use the item name or other parameters to search for specific items. For example:
 
     db.item.find({"name": "mongoitem"}).pretty()
 
-The next commands are the crud-operations via mongo
+The next commands are the crud-operations via mongo.
 
     db.item.insert({ "name" : "mongoitem", "description" : "testitem via mongo" })
 
-You may copy the id for the following steps
 
-Note that you will need to retrieve the correct id via the find-command for the following commands. You can use the find-command to retrieve the correct id if you have not copied it already (curser arrow up).
+Note that you will need the correct document id for the following commands. You may copy the id from the create-output for the following steps. You can later always use the find-command to retrieve the correct id (curser arrow up).
 
     db.item.updateOne({\_id: ObjectId("5cf29783fdb12e0b4391b1c2")}, {$set: {description: "Changed testitem via mongo"}})
     db.item.find({"name": "mongoitem"}).pretty()
@@ -83,28 +82,27 @@ Note that you will need to retrieve the correct id via the find-command for the 
     db.item.find({"name": "mongoitem"}).pretty()
 
 
-open new shell, start web server
+Open new shell, and navigate to the project folder:
 
     cd /Data/workspace-javascript/jslab/webserver-express/
 
-install server-code and dependencies
+Install the server-module and dependencies:
 
     npm init
     npm install --save express mongodb
 
-run web server
+Run web server:
 
     node .
 
-open new shell run the CRUD http-requests using the tool "httpie"
+Open a new shell and run the CRUD-http-requests using the tool "httpie":
 
     http get localhost:3000/
     http post localhost:3000/item name=foo description=bar
     http put localhost:3000/item \_id=5cf29e1911ed24467ee2f119 name=foo description="changed description"
     http delete localhost:3000/item \_id=5cf29783fdb12e0b4391b1c2
 
-also try the requests in the webbrowser
-also monitor the webserver output and changes in mongo
+Also try these requests in the webbrowser while monitoring the webserver outputs, and changes in mongo using the find() command.
 
 
 #### Additional Reading
