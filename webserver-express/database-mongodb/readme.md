@@ -57,7 +57,7 @@ open new shell, start mongo, connect (later use ctrl+ to stop)
 
 operate on / create collection
 
-    use item
+    use itemdb
     show collections
 
 inspect collection content
