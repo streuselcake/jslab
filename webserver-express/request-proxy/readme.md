@@ -10,7 +10,7 @@ Navigate the commandline into the request-proxy folder:
 
 #### Step 2
 
-You will find some request-proxy-code has already been copied to the index.js file. Use these commands to run it:
+You will find some request-proxy-code has already been copied to the index.js file. Use these commands to install it:
 
     npm init  
     npm install express --save
@@ -23,7 +23,7 @@ Start your server, by using the following command:
 
 #### Step 4
 
-Open the webapp by using the following link: 
+Open the webapp by using the following link:
 
 http://localhost:3000/
 
@@ -46,7 +46,7 @@ Navigieren sie mit der Befehlszeile in den request-proxy Ordner:
 
 #### 2. Schritt
 
-In die index.js Datei wurde schon etwas request-proxy-code kopiert. Nutzen sie die folgenden Befehle, um den Code laufen zu lassen:
+In die index.js Datei wurde schon etwas request-proxy-code kopiert. Nutzen sie die folgenden Befehle, um den Code zu installieren:
 
     npm init  
     npm install express --save

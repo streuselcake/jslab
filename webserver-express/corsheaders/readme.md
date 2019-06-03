@@ -10,7 +10,7 @@ Navigate the commandline into the corsheaders folder:
 
 #### Step 2
 
-You will find some corsheaders-code has already been copied to the index.js file. Use these commands to run it:
+You will find some corsheaders-code has already been copied to the index.js file. Use these commands to install it:
 
     npm init  
     npm install express --save
@@ -42,7 +42,7 @@ Navigieren sie mit der Befehlszeile in den corsheaders Ordner:
 
 #### 2. Schritt
 
-In die index.js Datei wurde schon etwas corsheaders-code kopiert. Nutzen sie die folgenden Befehle, um den Code laufen zu lassen:
+In die index.js Datei wurde schon etwas corsheaders-code kopiert. Nutzen sie die folgenden Befehle, um den Code zu installieren:
 
     npm init  
     npm install express --save

@@ -10,7 +10,7 @@ Navigate the commandline into the streamfile-pipe folder:
 
 #### Step 2
 
-You will find some streamfile-pipe-code has already been copied to the index.js file. Use these commands to run it:
+You will find some streamfile-pipe-code has already been copied to the index.js file. Use these commands to install it:
 
     npm init  
     npm install express --save
@@ -27,7 +27,7 @@ Start your server, by using the following command:
 
 #### Step 5
 
-Open the webapp by using the following link: 
+Open the webapp by using the following link:
 
 http://localhost:8001/
 
@@ -50,7 +50,7 @@ Navigieren sie mit der Befehlszeile in den streamfile-pipe Ordner:
 
 #### 2. Schritt
 
-In die index.js Datei wurde schon etwas streamfile-pipe-code kopiert. Nutzen sie die folgenden Befehle, um den Code laufen zu lassen:
+In die index.js Datei wurde schon etwas streamfile-pipe-code kopiert. Nutzen sie die folgenden Befehle, um den Code zu installieren:
 
     npm init  
     npm install express --save
