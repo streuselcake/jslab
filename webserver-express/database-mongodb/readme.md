@@ -75,10 +75,10 @@ The next commands are the crud-operations via mongo.
 
 Note that you will need the correct document id for the following commands. You may copy the id from the create-output for the following steps. You can later always use the find-command to retrieve the correct id (curser arrow up).
 
-    db.item.updateOne({\_id: ObjectId("5cf29783fdb12e0b4391b1c2")}, {$set: {description: "Changed testitem via mongo"}})
+    db.item.updateOne({_id: ObjectId("5cf29783fdb12e0b4391b1c2")}, {$set: {description: "Changed testitem via mongo"}})
     db.item.find({"name": "mongoitem"}).pretty()
 
-    db.item.deleteOne( { "\_id" : ObjectId("5cf29783fdb12e0b4391b1c2") } )
+    db.item.deleteOne( { "_id" : ObjectId("5cf29783fdb12e0b4391b1c2") } )
     db.item.find({"name": "mongoitem"}).pretty()
 
 
@@ -99,8 +99,8 @@ Open a new shell and run the CRUD-http-requests using the tool "httpie":
 
     http get localhost:3000/
     http post localhost:3000/item name=foo description=bar
-    http put localhost:3000/item \_id=5cf29e1911ed24467ee2f119 name=foo description="changed description"
-    http delete localhost:3000/item \_id=5cf29783fdb12e0b4391b1c2
+    http put localhost:3000/item _id=5cf29e1911ed24467ee2f119 name=foo description="changed description"
+    http delete localhost:3000/item _id=5cf29783fdb12e0b4391b1c2
 
 Also try these requests in the webbrowser while monitoring the webserver outputs, and changes in mongo using the find() command.
 
