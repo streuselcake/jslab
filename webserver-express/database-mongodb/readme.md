@@ -4,7 +4,7 @@
 
 #### Step 1
 
-Install the mongod service.
+Install and run the mongod service.
 
 #### Step 2
 

@@ -98,8 +98,8 @@ app.get("/", (req, res) => {
 
 app.get("/item", (req, res) => {
   // find item
-  console.log("update item " + req.body._id);
-  app.locals.db.collection('item').find({_id:new mongodb.ObjectID(req.body._id)}).toArray((error, result) => {
+  console.log("get item " + req.query._id);
+  app.locals.db.collection('item').find({_id:new mongodb.ObjectID(req.query._id)}).toArray((error, result) => {
     if(error){
       console.dir(error);
     }
