@@ -1,6 +1,10 @@
 # Readme
 
+<<<<<<< HEAD
 ## Node.js/Express-Webapp with Mongodb connection (with detailed step by step instructions)
+=======
+## Node.js/Express-Webapp with Mongodb connection. Steps 1 to 5 are the general usage Instructions. The exercise below includes the detailed step by step-instructions.
+>>>>>>> 9d187d889e111541eee7023e9dbc2f2671e49553
 
 This example shows how to start and use the provided nodejs-webserver with mongodb-connection.
 
@@ -17,9 +21,20 @@ https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
 
 Now open three shell instances for the (1.) database-service, (2.) webserver, and (3.) database operations respectiviely. Alternatively open them when needed.
 
+<<<<<<< HEAD
 Open a new shell-window and navigate to project folder (in which the data folder should be created):
 
     cd /<yourpath>/jslab/webserver-express/database-mongodb
+=======
+
+# Exercise
+
+In this exercise you will get started with the example by follwoing the provided commands.
+
+Open a new shell and navigate to project folder (in which the data folder should be created):
+
+    cd /Data/workspace-javascript/jslab/webserver-express/database-mongodb
+>>>>>>> 9d187d889e111541eee7023e9dbc2f2671e49553
 
 Create the data folder:
 
@@ -113,6 +128,7 @@ https://github.com/streuselcake/jslab/tree/master/webserver-express/request-form
 From a different perspective, this example demonstrates how to create a basic api. It responds with json data ready to use by the client page. To follow up with connecting a webpage to the api via ajax see:
 
 https://github.com/streuselcake/jslab/tree/master/webserver-express/database-mongodb-ajax
+
 
 
 #### Additional Reading
