@@ -114,7 +114,7 @@ https://github.com/streuselcake/jslab/tree/master/webserver-express/database-mon
 https://github.com/streuselcake/jslab/tree/master/webserver-express/request-form
 
 
-From a different perspective, this example demonstrates how to create a basic api. It responds with json data ready to use by a webpage. To follow up with connecting a webpage that uses the api via ajax developed here see:
+From a different perspective, this example demonstrates how to create a basic api. It responds with json data ready to use by the client page. To follow up with connecting a webpage to the api via ajax see:
 
 https://github.com/streuselcake/jslab/tree/master/webserver-express/database-mongodb-ajax
 
