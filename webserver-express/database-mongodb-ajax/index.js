@@ -83,10 +83,13 @@ const mongodb = require('mongodb');
 // db is now available and we can continue with the webapp
 
 
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+});
 
 // routes for get, post, put, and delete
 
-app.get("/", (req, res) => {
+app.get("/api/", (req, res) => {
   // find all
   app.locals.db.collection('item').find({}).toArray((error, result) => {
     if(error){
@@ -96,7 +99,7 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/item", (req, res) => {
+app.get("/api/item", (req, res) => {
   // find item
   console.log("get item " + req.query._id);
   app.locals.db.collection('item').find({_id:new mongodb.ObjectID(req.query._id)}).toArray((error, result) => {
@@ -107,7 +110,7 @@ app.get("/item", (req, res) => {
   });
 });
 
-app.post("/item", (req, res) => {
+app.post("/api/item", (req, res) => {
   // insert item
   console.log("insert item ");
   app.locals.db.collection('item').insertOne(req.body, (error, result) => {
@@ -118,7 +121,7 @@ app.post("/item", (req, res) => {
   });
 });
 
-app.put("/item", (req, res) => {
+app.put("/api/item", (req, res) => {
   // update item
   console.log("update item " + req.body._id);
   let id = req.body._id;
@@ -132,7 +135,7 @@ app.put("/item", (req, res) => {
   });
 });
 
-app.delete("/item", (req, res) => {
+app.delete("/api/item", (req, res) => {
   // delete item
   console.log("delete item " + req.body._id);
   let objectId = "ObjectId(" + req.body._id + ")";
