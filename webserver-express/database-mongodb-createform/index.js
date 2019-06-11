@@ -48,7 +48,7 @@ app.use(express.json());
 
 // middleware for handling urlencoded request data
 // https://expressjs.com/en/4x/api.html#express.urlencoded
-//app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));
 
 
 
@@ -82,7 +82,20 @@ const mongodb = require('mongodb');
 
 // db is now available and we can continue with the webapp
 
+app.get("/form", (req, res) => {
+  res.sendFile(__dirname + "/form.html");
+});
 
+app.post("/item/create", (req, res) => {
+  // insert item
+  console.log("insert item ");
+  app.locals.db.collection('item').insertOne(req.body, (error, result) => {
+    if(error){
+      console.dir(error);
+    }
+    res.redirect("/");
+  });
+});
 
 // routes for get, post, put, and delete
 
@@ -92,7 +105,7 @@ app.get("/", (req, res) => {
     if(error){
       console.dir(error);
     }
-    res.json(result);
+    res.send("res: " + JSON.stringify(result));
   });
 });
 
