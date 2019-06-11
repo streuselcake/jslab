@@ -87,6 +87,10 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
+app.get("/client.js", (req, res) => {
+  res.sendFile(__dirname + "/client.js");
+});
+
 // routes for get, post, put, and delete
 
 app.get("/api/", (req, res) => {
