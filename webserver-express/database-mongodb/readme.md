@@ -12,10 +12,9 @@ MacOS:
 For example, use homebrew as described in the documentation:
 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
 
+For the next steps, open three shell instances for the (1.) database-service, (2.) webserver, and (3.) database operations respectiviely. Alternatively open them when needed.
 
-#### Step 2. The database-service "mongod" (Shell 1.)
-
-Now open three shell instances for the (1.) database-service, (2.) webserver, and (3.) database operations respectiviely. Alternatively open them when needed.
+#### Step 2. The database-service (mongod, in Shell 1.) 
 
 Open a new shell-window and navigate to project folder (in which the data folder should be created):
 
@@ -30,7 +29,7 @@ Start mongod (later stop via ctrl+c):
     mongod --dbpath=./data
 
 
-#### Shell 2. The database-client (mongo)
+#### Step 3. The database-client (mongo, in Shell 2.)
 
 Start mongo and connect to the mongod service (later use ctrl+ to stop mongo):
 
@@ -66,7 +65,7 @@ Note that you will need the correct document id for the following commands. You 
     db.item.deleteOne( { "_id" : ObjectId("5cf29783fdb12e0b4391b1c2") } )
     db.item.find({"name": "mongoitem"}).pretty()
 
-#### Step 3 The mongodb-webserver (Shell 3.)
+#### Step 4. The mongodb-connected webserver (npm and node in Shell 3.)
 
 Navigate to the project folder:
 
@@ -80,37 +79,40 @@ You will find some mongodb-code has already been copied to the index.js file. Us
 Run the web server, by using the following command:
 
     node .
+    
+Perhaps now rad the server's source code to find the routes or continue with Step 4. of this exercise.
 
-#### Step 4 Test the webserver (Browser and Shell 2.)
+#### Step 4. Different ways of calling the webserver (Browser and Shell 2.)
 
 Open the webapp by using the following link:
 
 http://localhost:3000/
 
-Note that this is currently a route that responds JSON-Data (this is visible in the HTTP-Response-Headers) You can now make POST, PUT, DELETE or GET requests via the browsers webdeveloper tools, using a http tool, or create your websites with ajax-requests and/or forms sending the requests. Read the source code to find the routes or continue with the exercise.
+Note that this is currently a route that responds JSON-Data (this is visible in the HTTP-Response-Headers).
+Also try to access the the other specified url-routes via the webbrowser by opening the url-routes. To get the browser to request the specified routes use the developer tools and find the "edit and resend" button available for a selected request header.
 
-Using the tool "httpie", try the http-requests for the CRUD operations:
+Using the tool "httpie", try the http-requests for the CRUD operations by using the following commands:
 
     http get localhost:3000/
     http post localhost:3000/item name=foo description=bar
     http put localhost:3000/item _id=5cf29e1911ed24467ee2f119 name=foo description="changed description"
     http delete localhost:3000/item _id=5cf29783fdb12e0b4391b1c2
 
-Also try to access the the specified url-routes via the webbrowser by opening the url-routes and then using the developer tools.
-
 While testing the different options, also monitor the webserver outputs, and changes in mongo using the find() command.
+
+You can now make POST, PUT, DELETE or GET requests via the browsers webdeveloper tools, using a http tool. You can use this example as a basis for creating your websites with ajax-requests and/or forms sending requests. 
 
 
 #### How to continue:
 
-This example has demonstrated how connect a webserver to a database, how the javascript-server can access it and make it available via http using url-routes. To follow up with connecting forms to the server see:
+This example demonstrated how to connect a webserver to a database, how the javascript-server can access it and make it available via http using url-routes. To follow up with forms that call the server see:
 
 https://github.com/streuselcake/jslab/tree/master/webserver-express/database-mongodb-createform
 
 https://github.com/streuselcake/jslab/tree/master/webserver-express/request-form
 
 
-From a different perspective, this example demonstrates how to create a basic api. It responds with json data ready to use by the client page. To follow up with connecting a webpage to the api via ajax see:
+From a different perspective, this example demonstrated how to create a basic api. It responded with json data ready to use by a client-Skript. To follow up with connecting a webpage to the api using ajax see:
 
 https://github.com/streuselcake/jslab/tree/master/webserver-express/database-mongodb-ajax
 
