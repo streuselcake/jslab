@@ -1,6 +1,6 @@
 # Readme
 
-## Node.js/Express-Webapp with Mongodb connection (general usage Instructions; detailed step by step instructions below)
+## Node.js/Express-Webapp with Mongodb connection. Steps 1 to 5 are the general usage Instructions. The exercise below includes the detailed step by step-instructions.
 
 #### Step 1
 
@@ -34,9 +34,10 @@ http://localhost:3000/
 
 You can now make POST, PUT, DELETE or GET requests via the browsers webdeveloper tools, using a http tool, or create your websites with forms sending the requests. Read the source code to find the routes or continue with the exercise.
 
+
 # Exercise
 
-To get started with the example, try the following commands.
+In this exercise you will get started with the example by follwoing the provided commands.
 
 Open a new shell and navigate to project folder (in which the data folder should be created):
 
@@ -103,6 +104,19 @@ Open a new shell and run the CRUD-http-requests using the tool "httpie":
     http delete localhost:3000/item _id=5cf29783fdb12e0b4391b1c2
 
 Also try these requests in the webbrowser while monitoring the webserver outputs, and changes in mongo using the find() command.
+
+# Next:
+
+This example has demonstrated how connect a webserver to a database, how the javascript-server can access it and make it available via http using url-routes. To follow up with connecting forms to the server see:
+
+https://github.com/streuselcake/jslab/tree/master/webserver-express/database-mongodb-createform
+
+https://github.com/streuselcake/jslab/tree/master/webserver-express/request-form
+
+
+From a different perspective, this example demonstrates how to create a basic api. It responds with json data ready to use by a webpage. To follow up with connecting a webpage that uses the api via ajax developed here see:
+
+https://github.com/streuselcake/jslab/tree/master/webserver-express/database-mongodb-ajax
 
 
 #### Additional Reading
