@@ -1,8 +1,8 @@
 # Readme
 
-## Node.js/Express-Webapp with Mongodb connection (detailed step by step instructions below)
+## Node.js/Express-Webapp with Mongodb connection (with detailed step by step instructions)
 
-This example shows how to start and use the provided nodejs-webserver with mongodb-connection. For completing the procedure, we need mongodb, nodejs, and npm installed.
+This example shows how to start and use the provided nodejs-webserver with mongodb-connection.
 
 #### Step 1
 
@@ -15,7 +15,7 @@ https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
 
 #### Step 2. The database-service "mongod" (Shell 1.)
 
-Now open three shell instances for the (1.) database-service, (2.) webserver, and (3.) database operations respectiviely.
+Now open three shell instances for the (1.) database-service, (2.) webserver, and (3.) database operations respectiviely. Alternatively open them when needed.
 
 Open a new shell-window and navigate to project folder (in which the data folder should be created):
 
