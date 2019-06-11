@@ -1,46 +1,25 @@
 # Readme
 
-## Node.js/Express-Webapp with Mongodb connection (general usage Instructions; detailed step by step instructions below)
+## Node.js/Express-Webapp with Mongodb connection (detailed step by step instructions below)
+
+This example shows how to start and use the provided nodejs-webserver with mongodb-connection. For completing the procedure, we need mongodb, nodejs, and npm installed.
 
 #### Step 1
 
-Install and run the mongod service.
+Install the mongod service (community edition) and mongo client.
 
-#### Step 2
+MacOS:
+For example, use homebrew as described in the documentation:
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
 
-Navigate the commandline into the database-mongodb folder:
 
-    cd /yourpath/webserver-express/database-mongodb
+#### Step 2. The database-service "mongod" (Shell 1.)
 
-#### Step 3
+Now open three shell instances for the (1.) database-service, (2.) webserver, and (3.) database operations respectiviely.
 
-You will find some mongodb-code has already been copied to the index.js file. Use these commands to initialize a new module for it and install the dependencies:
+Open a new shell-window and navigate to project folder (in which the data folder should be created):
 
-    npm init  
-    npm install express --save
-    npm install mongodb --save
-
-#### Step 4
-
-Start your server, by using the following command:
-
-    node .
-
-#### Step 5
-
-Open the webapp by using the following link:
-
-http://localhost:3000/
-
-You can now make POST, PUT, DELETE or GET requests via the browsers webdeveloper tools, using a http tool, or create your websites with forms sending the requests. Read the source code to find the routes or continue with the exercise.
-
-# Exercise
-
-To get started with the example, try the following commands.
-
-Open a new shell and navigate to project folder (in which the data folder should be created):
-
-    cd /Data/workspace-javascript/jslab/webserver-express/database-mongodb
+    cd /<yourpath>/jslab/webserver-express/database-mongodb
 
 Create the data folder:
 
@@ -50,12 +29,18 @@ Start mongod (later stop via ctrl+c):
 
     mongod --dbpath=./data
 
-Open a new shell, start mongo, connect (later use ctrl+ to stop):
+
+#### Shell 2. The database-client (mongo)
+
+Start mongo and connect to the mongod service (later use ctrl+ to stop mongo):
 
     mongo --host 127.0.0.1:27017
+
+To show all databases that contain data use:
+
     show databases
 
-Operate on / create item-database "itemdb".
+To operate on or create an item-database "itemdb" if not already created use:
 
     use itemdb
     show collections
@@ -81,28 +66,53 @@ Note that you will need the correct document id for the following commands. You 
     db.item.deleteOne( { "_id" : ObjectId("5cf29783fdb12e0b4391b1c2") } )
     db.item.find({"name": "mongoitem"}).pretty()
 
+#### Step 3 The mongodb-webserver (Shell 3.)
 
-Open new shell, and navigate to the project folder:
+Navigate to the project folder:
 
-    cd /Data/workspace-javascript/jslab/webserver-express/
+    cd /<yourpath>/jslab/webserver-express/
 
-Install the server-module and dependencies:
+You will find some mongodb-code has already been copied to the index.js file. Use these commands to initialize a new module for it and install the dependencies:
 
     npm init
     npm install --save express mongodb
 
-Run web server:
+Run the web server, by using the following command:
 
     node .
 
-Open a new shell and run the CRUD-http-requests using the tool "httpie":
+#### Step 4 Test the webserver (Browser and Shell 2.)
+
+Open the webapp by using the following link:
+
+http://localhost:3000/
+
+Note that this is currently a route that responds JSON-Data (this is visible in the HTTP-Response-Headers) You can now make POST, PUT, DELETE or GET requests via the browsers webdeveloper tools, using a http tool, or create your websites with ajax-requests and/or forms sending the requests. Read the source code to find the routes or continue with the exercise.
+
+Using the tool "httpie", try the http-requests for the CRUD operations:
 
     http get localhost:3000/
     http post localhost:3000/item name=foo description=bar
     http put localhost:3000/item _id=5cf29e1911ed24467ee2f119 name=foo description="changed description"
     http delete localhost:3000/item _id=5cf29783fdb12e0b4391b1c2
 
-Also try these requests in the webbrowser while monitoring the webserver outputs, and changes in mongo using the find() command.
+Also try to access the the specified url-routes via the webbrowser by opening the url-routes and then using the developer tools.
+
+While testing the different options, also monitor the webserver outputs, and changes in mongo using the find() command.
+
+
+#### How to continue:
+
+This example has demonstrated how connect a webserver to a database, how the javascript-server can access it and make it available via http using url-routes. To follow up with connecting forms to the server see:
+
+https://github.com/streuselcake/jslab/tree/master/webserver-express/database-mongodb-createform
+
+https://github.com/streuselcake/jslab/tree/master/webserver-express/request-form
+
+
+From a different perspective, this example demonstrates how to create a basic api. It responds with json data ready to use by the client page. To follow up with connecting a webpage to the api via ajax see:
+
+https://github.com/streuselcake/jslab/tree/master/webserver-express/database-mongodb-ajax
 
 
 #### Additional Reading
