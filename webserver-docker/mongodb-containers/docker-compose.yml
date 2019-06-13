@@ -1,0 +1,17 @@
+version: "3"
+services:
+  app:
+    build: .
+    #image: <username>/<imagename>
+    ports:
+      - "80:3000" # forward webserver on standard-http port
+    depends_on:
+      - mongodbservice
+  mongodbservice:
+    image: mongo # to be retrieved from dockerhub
+    ports:
+      - "27017:27017" # forward mongod port
+    volumes:
+    - ./data:/data/db
+    # find out where to mount to in the image's Dockerfile;
+    #           here: https://github.com/docker-library/mongo/blob/00a8519463e776e797c227681a595986d8f9dbe1/3.0/Dockerfile
