@@ -22,16 +22,16 @@ function changeObject(oInF){
   "use strict";
 
   console.log("object oInF in function scope before change: ");
-  console.dir(oInF);
+  console.log(JSON.stringify(oInF));
   oInF.a = "c";
   console.log("object oInF in function scope after change: ");
-  console.dir(oInF);
+  console.log(JSON.stringify(oInF));
 
 }
 
 console.log("object oInGlobal in global scope before change: ");
-console.dir(oInGlobal);
+console.log(JSON.stringify(oInGlobal));
 console.log("calling changeObject...");
 changeObject(oInGlobal);
 console.log("object oInGlobal in global scope after change: ");
-console.dir(oInGlobal);
+console.log(JSON.stringify(oInGlobal));
