@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- production version, optimized for size and speed -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+<title>Vue: Events</title>
+</head>
+
+<body>
+
+  <div id="app">
+    {{ message }} <br/>
+    <input v-model="message"><br/>
+    <button v-on:click="reverseMessage"
+            v-on:mouseover="reverseMessage"
+            v-on:mouseout="reverseMessage">Reverse Message</button>
+  </div>
+
+
+  <script type="text/javascript">
+
+  var app = new Vue({
+    el: '#app',
+    data: { message: 'Hello Vue!' },
+    methods: { reverseMessage: function () { this.message = this.message.split('').reverse().join('') } }
+  });
+
+  </script>
+
+</body>
+</html>

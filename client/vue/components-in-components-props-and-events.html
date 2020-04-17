@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- production version, optimized for size and speed -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+<title>Vue: Components</title>
+</head>
+
+<body>
+
+  <div id="app"><buttons-counter v-on:jedi='alert("jedi")'
+                                  v-on:sith='alert("sith")'>
+            </buttons-counter>
+  </div>
+
+
+  <script type="text/javascript">
+
+  Vue.component('buttons-counter', {
+    data: function () { return { jedi_counter: 0, sith_counter: 0 } },
+    methods : {
+      pressed : function(type){
+        if(type=="jedi"){
+          ++this.jedi_counter;
+        }
+        if(type=="sith"){
+          ++this.sith_counter;
+        }
+      }
+    },
+    template: '<div>' +
+              'Sith strikes:  {{ sith_counter }} <br />' +
+              'Jedi strikes: {{ jedi_counter }} <br />' +
+              '<button-counter prop="Yoda" type="jedi" v-on:pressed="pressed($event)"></button-counter>' +
+              '<button-counter prop="Luke" type="jedi" v-on:pressed="pressed"></button-counter>' +
+              '<button-counter prop="Obiwan" type="jedi" v-on:pressed="pressed"></button-counter>' +
+              '<button-counter prop="Darth Vader" type="sith" v-on:pressed="pressed"></button-counter>' +
+              '</div>'
+  });
+
+  Vue.component('button-counter', {
+    data: function () { return { counter: 0 } },
+    props: ['prop', 'type'],
+    methods: {
+      pressed: function(){
+        ++this.counter;
+        this.$emit('pressed', this.type);
+      }
+    },
+    template: '<button v-on:click="pressed">{{ counter }} ({{ prop }} strike +1)</button>'
+  });
+
+  var app = new Vue({ el: '#app' });
+
+  </script>
+
+</body>
+</html>

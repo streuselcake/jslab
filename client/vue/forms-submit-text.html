@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- production version, optimized for size and speed -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+<title>Vue: Forms</title>
+</head>
+
+<body>
+
+  <div>
+    <form id="app" v-on:submit="checkForm" action="forms-submit-text.html" method="get">
+
+    <input name="formsmessage" v-model="message"><br/><br/>
+
+    <input name="formsradio" type="radio" id="luke" value="Luke" v-model="checkedName">
+    <label for="luke">Luke</label>
+    <input name="formsradio" type="radio" id="yoda" value="Yoda" v-model="checkedName">
+    <label for="yoda">Yoda</label>
+    <input name="formsradio" type="radio" id="obiwan" value="Obiwan" v-model="checkedName">
+    <label for="obiwan">Obiwan</label><br/><br/>
+
+    <input type="submit" value="Submit"><br/><br/>
+
+    Filled: {{ message }} -- {{ checkedName }}<br/><br/>
+
+    Sent: {{ sent }}
+
+    </form>
+
+
+  </div>
+
+
+  <script type="text/javascript">
+
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: "Hello Vue!",
+      checkedName: "Yoda",
+      sent: ""
+    },
+    methods: {
+      checkForm: function (e) {
+        // if (this.message) {
+          return true;
+        // }
+      }
+    },
+    created(){
+      this.sent = location.search;
+    }
+  });
+
+  </script>
+
+</body>
+</html>

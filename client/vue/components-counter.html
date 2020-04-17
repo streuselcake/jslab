@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- production version, optimized for size and speed -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+<title>Vue: Components</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <button-counter></button-counter>
+  </div>
+
+
+  <script type="text/javascript">
+
+  Vue.component('button-counter', {
+    data: function () {
+      return {
+        counter: 0
+      }
+    },
+    methods: {
+      pressed: function(){++this.counter;}
+    },
+    template: '<div>{{ counter }} <br/><button v-on:click="pressed">+1</button></div>'
+    })
+
+  var app = new Vue({ el: '#app' });
+
+  </script>
+
+</body>
+</html>

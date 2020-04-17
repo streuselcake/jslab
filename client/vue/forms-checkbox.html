@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- production version, optimized for size and speed -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+<title>Vue: Forms</title>
+</head>
+
+<body>
+
+  <div id="app">
+    {{ checkedNames }} <br/>
+    <input type="checkbox" id="luke" value="Luke" v-model="checkedNames">
+    <label for="luke">Luke</label>
+    <input type="checkbox" id="yoda" value="Yoda" v-model="checkedNames">
+    <label for="yoda">Yoda</label>
+    <input type="checkbox" id="obiwan" value="Obiwan" v-model="checkedNames">
+    <label for="obiwan">Obiwan</label><br>
+  </div>
+
+
+  <script type="text/javascript">
+
+  var app = new Vue({
+    el: '#app',
+    data: {
+      checkedNames: ["Yoda", "Luke"]
+    }
+  });
+
+  </script>
+
+</body>
+</html>

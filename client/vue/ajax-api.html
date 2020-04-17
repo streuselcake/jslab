@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- production version, optimized for size and speed -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+<title>Vue: Forms</title>
+</head>
+
+<body>
+
+  <div id="app">
+     <!-- {{ responseData }} <br/><br/> -->
+     Weather in {{ place }}: {{ weather }}, {{ temp }} degree Celsius</div>
+
+  <script src="../../_api-token/token.js"></script>
+  <script type="text/javascript">
+
+  var app = new Vue({
+    el: "#app",
+    data: {
+      all: "Calling weather api...",
+      weather: "",
+      place: "",
+      temp: "",
+      responseData: {},
+      x: {}
+    },
+    methods: {
+
+      cbState: function () {
+        if (this.x.status == "200" && this.x.readyState == 4) {
+          this.responseData = JSON.parse(this.x.responseText);
+          this.responseText = this.x.responseText +  JSON.stringify(this.responseData,null,4);
+          this.weather = this.responseData.weather[0].description;
+          this.temp = this.responseData.main.temp;
+          this.place = this.responseData.name;
+          console.dir(this.weather);
+        }
+      },
+      cbError: function (e) { this.weather = "cbError: check web-console";},
+      cbLoad: function () { console.log(this.x.status); }
+    },
+    created(){
+      var lat =  51.969431;
+      var long =  7.595707;
+      var resource =  "https://api.openweathermap.org/data/2.5/weather?units=metric&lat="+lat+"&lon="+long+"&appid="+token.OPENWEATHERMAP_TOKEN;
+
+      this.x = new XMLHttpRequest();
+      this.x.onload = this.cbLoad;
+      this.x.onerror = this.cbError;
+      this.x.onreadystatechange = this.cbState;
+      this.x.open("GET", resource, true);
+      this.x.send();
+    }
+  });
+
+  </script>
+
+</body>
+</html>
