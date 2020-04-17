@@ -14,18 +14,16 @@
 
 <body>
 
-  <div id="app"><buttons-counter v-on:jedi='alert("jedi")'
-                                  v-on:sith='alert("sith")'>
-            </buttons-counter>
+  <div id="app"><sum-counter></sum-counter>
   </div>
 
 
   <script type="text/javascript">
 
-  Vue.component('buttons-counter', {
+  Vue.component('sum-counter', {
     data: function () { return { jedi_counter: 0, sith_counter: 0 } },
     methods : {
-      pressed : function(type){
+      sum : function(type){
         if(type=="jedi"){
           ++this.jedi_counter;
         }
@@ -37,23 +35,18 @@
     template: '<div>' +
               'Sith strikes:  {{ sith_counter }} <br />' +
               'Jedi strikes: {{ jedi_counter }} <br />' +
-              '<button-counter prop="Yoda" type="jedi" v-on:pressed="pressed($event)"></button-counter>' +
-              '<button-counter prop="Luke" type="jedi" v-on:pressed="pressed"></button-counter>' +
-              '<button-counter prop="Obiwan" type="jedi" v-on:pressed="pressed"></button-counter>' +
-              '<button-counter prop="Darth Vader" type="sith" v-on:pressed="pressed"></button-counter>' +
+              '<button-counter p="Yoda" t="jedi" v-on:pressed="sum"></button-counter>' +
+              '<button-counter p="Luke" t="jedi" v-on:pressed="sum"></button-counter>' +
+              '<button-counter p="Obiwan" t="jedi" v-on:pressed="sum"></button-counter>' +
+              '<button-counter p="Darth Vader" t="sith" v-on:pressed="sum"></button-counter>' +
               '</div>'
   });
 
   Vue.component('button-counter', {
-    data: function () { return { counter: 0 } },
-    props: ['prop', 'type'],
-    methods: {
-      pressed: function(){
-        ++this.counter;
-        this.$emit('pressed', this.type);
-      }
-    },
-    template: '<button v-on:click="pressed">{{ counter }} ({{ prop }} strike +1)</button>'
+    data: function () { return { c: 0 } },
+    props: ['p', 't'],
+    methods: { press: function(){ ++this.c; this.$emit('pressed', this.t); } },
+    template: '<button v-on:click="press">{{ c }} ({{ p }} strike +1)</button>'
   });
 
   var app = new Vue({ el: '#app' });
